@@ -12,7 +12,7 @@ const Nav = ({ skillSlug }) => {
     <Container>
       <Back onClick={() => navigate(`/`)}/>
       {skills && skills.map((skill, idx) => {
-        return (
+        return skill.showInNav && (
           <Link 
             isSelected={skillSlug === skill.slug}
             onClick={() => navigate(`/skills/${skill.slug}`)}

@@ -19,6 +19,16 @@ const Heading = styled.h2(props => {
   }
 })
 
+const Body = styled.p(props => {
+  const { theme } = props;
+  return {
+    fontSize: '1.2rem',
+    margin: `${theme.margin / 2}px 0px`,
+    padding: 0
+  }
+})
+
 export default {
-  Heading
+  Heading,
+  Body
 }

@@ -3,8 +3,8 @@ import { useParams } from 'react-router-dom';
 
 import useSkills from 'hooks/useSkills';
 
-import { Nav, Text } from 'components';
-import { Page } from './styles';
+import { Nav, Text, Layout } from 'components';
+import { Page, Header, Paragraph } from './styles';
 
 const Skill = () => {
   const params = useParams();
@@ -20,11 +20,29 @@ const Skill = () => {
     <Page>
       <Nav skillSlug={skill?.slug}/>
 
-      <Text.Heading>
-        {skill?.name}
-      </Text.Heading>
+      <Header>
+        <Text.Heading size={2}>
+          {skill?.title || skill?.name}
+        </Text.Heading>
+      </Header>
 
-      
+      {skill && 
+      skill.text?.length > 0 && 
+      skill.text.map((p, idx) => {
+        return (
+          <Paragraph>
+            <Layout.Col size={0.5}>
+              <div className='bullet' /> 
+            </Layout.Col>
+
+            <Layout.Col size={11.5}>
+              <Text.Body key={`p-idx-${idx}`}>
+                {p}
+              </Text.Body>
+            </Layout.Col>
+          </Paragraph>
+        )
+      })}
     </Page>
   )
 }

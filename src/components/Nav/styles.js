@@ -23,6 +23,7 @@ export const Link = styled.a(props => {
   return {
     color: isSelected && theme.colors.main,
     margin: theme.margin,
+    fontWeight: 'bold',
     borderBottom: isSelected 
       ? `${borderSize}px solid ${theme.colors.main}`
       : `${borderSize}px solid transparent`,
@@ -35,7 +36,7 @@ export const Link = styled.a(props => {
 
 export const Back = styled.div(props => {
   const { theme } = props;
-  const size = 50;
+  const size = 30;
   return {
     position: 'absolute',
     borderRadius: '50%',
@@ -43,7 +44,7 @@ export const Back = styled.div(props => {
     color: theme.colors.black,
     height: size,
     width: size,
-    top: theme.navHeight + theme.margin,
+    top: theme.margin,
     left: theme.margin,
     '&:hover': {
       cursor: 'pointer'

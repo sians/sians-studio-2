@@ -5,6 +5,7 @@ const theme = {
   margin: 16,
   fontFamily: "Spartan",
   navHeight: 60,
+  maxPageWidth: 900,
   colors: {
     black: '#32322d',
     white: '#fff',

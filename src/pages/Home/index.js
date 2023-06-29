@@ -36,7 +36,6 @@ const Home = () => {
           <SkillsList skills={skills}/>
         </Layout.Col>
       </Layout.Row>
-
     </Page>
   )
 }

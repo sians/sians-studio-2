@@ -12,7 +12,7 @@ const SkillsList = ({ skills }) => {
   return skills && (
     <ListContainer>
       {skills.map((skill, idx) => {
-        return (
+        return skill?.showInChart && (
           <Item 
             key={`sk-idx-${idx}`}  
             percent={skill.proficiency}
