@@ -1,26 +1,23 @@
-import { useMemo } from 'react';
+import { useNavigate } from 'react-router-dom';
+
+import useSkills from 'hooks/useSkills';
 
 import { Text } from 'components';
 import { ListContainer, Item } from './styles';
 
 const SkillsList = ({ skills }) => {
-  const mostProficientSkill = useMemo(() => {
-    return skills.reduce((highest, skill) => {
-      return (highest.proficiency > skill.proficiency)
-        ? highest
-        : skill;
-    })
-  }, [skills])
+  const navigate = useNavigate();
+  const { mostProficientSkill } = useSkills();
 
   return skills && (
     <ListContainer>
       {skills.map((skill, idx) => {
-        console.log('sk', skill)
         return (
           <Item 
             key={`sk-idx-${idx}`}  
             percent={skill.proficiency}
             highestPercent={mostProficientSkill?.proficiency}
+            onClick={() => navigate(`/skills/${skill.slug}`)}
           >
             <div className='progress'/>
             <Text.Heading size={2} fontWeight={400}>
