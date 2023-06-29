@@ -5,6 +5,7 @@ const theme = {
   margin: 16,
   fontFamily: "Spartan",
   colors: {
+    black: '#32322d',
     main: '#F98012'
   }
 };
