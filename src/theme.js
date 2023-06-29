@@ -6,7 +6,8 @@ const theme = {
   fontFamily: "Spartan",
   colors: {
     black: '#32322d',
-    main: '#F98012'
+    main: '#F98012',
+    bg: '#f0fbfe7a'
   }
 };
 
@@ -21,6 +22,8 @@ export const GlobalStyles = createGlobalStyle(() => {
       '-webkit-font-smoothing': 'antialiased',
       '-moz-osx-font-smoothing': 'grayscale',
       overflow: 'hidden',
+      color: theme.colors.black,
+      backgroundColor: theme.colors.bg
     },
     'code': {
       fontFamily: theme.fontFamily,

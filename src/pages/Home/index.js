@@ -1,9 +1,10 @@
-import { Page } from './styles';
-
 import devImg from 'assets/donate-dev.png';
+import skills from 'data/skills';
 
-import { Text, Layout, Image } from 'components';
-import { Header } from './styles';
+import { Text, Layout, Image, SkillsList } from 'components';
+import { Page, Header, ImgContainer } from './styles';
+
+const IMG_TEXT = 'laptop dreams qubits; siân dreams of sweet caffeine; flynn counts sheep in his sleep';
 
 const Home = () => {
   return (
@@ -13,17 +14,26 @@ const Home = () => {
           size={1}
           textAlign='center'
         >
-          hi, i'm <span>siân</span>.
+          my name is <span>siân</span>.
+        </Text.Heading>
+        <Text.Heading>
+        i make stuff with:
         </Text.Heading>
       </Header>
 
       <Layout.Row>
-        <Layout.Col size={6}>
-          <Image src={devImg} maxWidth={'100%'}/>
-        </Layout.Col>
+        <ImgContainer>
+          <Image 
+            src={devImg} 
+            maxWidth={'40%'}
+            alt={IMG_TEXT}
+            title={IMG_TEXT}
+          />
+        </ImgContainer>
 
-        <Layout.Col size={6}>
-
+        <Layout.Col size={3}/>
+        <Layout.Col size={9}>
+          <SkillsList skills={skills}/>
         </Layout.Col>
       </Layout.Row>
 

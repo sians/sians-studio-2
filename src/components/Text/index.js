@@ -8,17 +8,14 @@ const HEADING_SIZES = {
 }
 
 const Heading = styled.h2(props => {
-  const { theme, colorName, size } = props;
+  const { theme, colorName, size, fontWeight } = props;
 
   return {
     fontSize: HEADING_SIZES[size] || '2rem',
+    fontWeight: fontWeight || 'bold',
     padding: 0,
     margin: 0,
     color: theme.colors?.[colorName] || theme.colors.black,
-
-    '&:hover': {
-      cursor: 'default'
-    }
   }
 })
 
