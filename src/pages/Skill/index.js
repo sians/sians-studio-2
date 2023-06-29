@@ -3,6 +3,9 @@ import { useParams } from 'react-router-dom';
 
 import useSkills from 'hooks/useSkills';
 
+import { Nav, Text } from 'components';
+import { Page } from './styles';
+
 const Skill = () => {
   const params = useParams();
   const { getSkillBySlug } = useSkills();
@@ -14,9 +17,15 @@ const Skill = () => {
   }, [params?.slug])
 
   return (
-    <>
-      {skill?.name}
-    </>
+    <Page>
+      <Nav skillSlug={skill?.slug}/>
+
+      <Text.Heading>
+        {skill?.name}
+      </Text.Heading>
+
+      
+    </Page>
   )
 }
 

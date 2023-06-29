@@ -4,8 +4,10 @@ import './fonts.css';
 const theme = {
   margin: 16,
   fontFamily: "Spartan",
+  navHeight: 60,
   colors: {
     black: '#32322d',
+    white: '#fff',
     main: '#F98012',
     bg: '#f0fbfe7a'
   }
