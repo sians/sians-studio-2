@@ -4,6 +4,9 @@ import './fonts.css';
 const theme = {
   margin: 16,
   fontFamily: "Spartan",
+  colors: {
+    main: '#F98012'
+  }
 };
 
 export const GlobalStyles = createGlobalStyle(() => {
