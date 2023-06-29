@@ -1,0 +1,33 @@
+@font-face {
+  font-family: "Spartan";
+  src: url('./assets/fonts/Spartan-Thin.ttf');
+  font-weight: 100;
+  font-style: thin;
+}
+
+@font-face {
+  font-family: "Spartan";
+  src: url('./assets/fonts/Spartan-Light.ttf');
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: "Spartan";
+  src: url('./assets/fonts/Spartan-Regular.ttf');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Spartan";
+  src: url('./assets/fonts/Spartan-SemiBold.ttf');
+  font-weight: 700;
+  font-style: medium;
+}
+
+@font-face {
+  font-family: "Spartan";
+  src: url('./assets/fonts/Spartan-ExtraBold.ttf');
+  font-weight: 900;
+  font-style: bold;
+}
