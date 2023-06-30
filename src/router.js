@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import { Home, Skill } from './pages';
 
 const routes = [
@@ -10,7 +10,7 @@ const routes = [
 
 export default function Router() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         {routes.map((route, index) => {
           return (
@@ -22,6 +22,6 @@ export default function Router() {
           );
         })}
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
