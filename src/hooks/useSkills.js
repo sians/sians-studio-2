@@ -1,15 +1,12 @@
-import { useMemo } from 'react';
 import skills from 'data/skills';
 
 const useSkills = () => {
   // returns Skill with highest proficiency
-  const mostProficientSkill = useMemo(() => {
-    return skills.reduce((highest, skill) => {
+  const mostProficientSkill = skills.reduce((highest, skill) => {
       return (highest.proficiency > skill.proficiency)
         ? highest
         : skill;
-    })
-  }, [skills])
+    });
 
   // returns Skill by slug
   const getSkillBySlug = (slug) => {

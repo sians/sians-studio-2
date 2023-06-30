@@ -29,7 +29,9 @@ const Body = styled.p(props => {
   }
 })
 
-export default {
+const Text = {
   Heading,
   Body
 }
+
+export default Text;

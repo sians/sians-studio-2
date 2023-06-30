@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const Row = styled.div(props => {
-  const { padding, theme, align, justify, height, overflowY } = props;
+  const { padding, align, justify, height, overflowY } = props;
   const rowPadding = padding || 0;
   return {
     display: 'flex',
@@ -17,7 +17,7 @@ const Row = styled.div(props => {
 })
 
 const Col = styled.div(props => {
-  const { size, padding, theme, justify, align, overflow, maxHeight } = props;
+  const { size, padding, justify, align, overflow, maxHeight } = props;
   const colPadding = padding || 0;
   const widthPercentage = size / 12 * 100;
 
@@ -35,7 +35,9 @@ const Col = styled.div(props => {
   }
 })
 
-export default {
+const Layout = {
   Row,
   Col
 }
+
+export default Layout;

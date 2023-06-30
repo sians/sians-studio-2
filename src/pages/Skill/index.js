@@ -14,7 +14,7 @@ const Skill = () => {
     if (params?.slug) {
       return getSkillBySlug(params.slug)
     }
-  }, [params?.slug])
+  }, [params?.slug, getSkillBySlug])
 
   return (
     <Page>
