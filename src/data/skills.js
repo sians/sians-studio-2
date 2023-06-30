@@ -25,8 +25,6 @@ const SKILLS = [
     showInChart: true,
     showInNav: true,
     text: [
-    proficiency: 65,
-    slug: 'python',
     ],
   },  
   {
