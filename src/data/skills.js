@@ -64,11 +64,12 @@ const SKILLS = [
     ],
   },  
   {
-    name: 'Etc',
+    name: 'Playground',
     proficiency: 0,
-    slug: 'etc',
+    slug: 'playground',
     showInChart: false,
     showInNav: true,
+    blurb: "There's always a list of things I'm learning, or exploring, or experimenting with, but which don't qualify as experience at a professional level.  In no particular order, here are some things I know a little but not a lot about:",
     text: [
     ],
   },    

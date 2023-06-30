@@ -26,6 +26,12 @@ const Skill = () => {
         </Text.Heading>
       </Header>
 
+      {skill && skill.blurb &&
+        <Text.Body className='blurb'>
+          {skill.blurb}
+        </Text.Body>
+      }
+
       {skill && 
       skill.text?.length > 0 && 
       skill.text.map((p, idx) => {

@@ -1,3 +1,5 @@
+import { useNavigate } from 'react-router-dom';
+
 import devImg from 'assets/donate-dev.png';
 import skills from 'data/skills';
 
@@ -7,6 +9,8 @@ import { Page, Header, ImgContainer } from './styles';
 const IMG_TEXT = 'laptop dreams qubits; siân dreams of sweet caffeine; flynn counts sheep in his sleep';
 
 const Home = () => {
+  const navigate = useNavigate();
+
   return (
     <Page>
       <Header>
@@ -14,10 +18,10 @@ const Home = () => {
           size={1}
           textAlign='center'
         >
-          my name is <span>siân</span>.
+          hi my name is <a target='_blank' href={`https://github.com/sians`}>siân</a>. 
         </Text.Heading>
-        <Text.Heading>
-        i make stuff with:
+        <Text.Heading  size={3} textAlign='center'>
+          sometimes i code. <span>occasionally i sleep.</span>
         </Text.Heading>
       </Header>
 

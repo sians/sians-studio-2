@@ -15,19 +15,42 @@ export const Page = styled.div(props => {
     flexDirection: 'column',
     justifyContent: 'center',
 
+    'a': {
+      color: theme.colors.main,
+      textDecoration: 'none',
+      background: ` 
+        linear-gradient(to right, ${theme.colors.white}, ${theme.colors.white}),
+        linear-gradient(to right, ${theme.colors.main}, ${theme.colors.main})`,
+      backgroundSize: '100% 0.15em, 0 0.15em',
+      backgroundPosition: '100% 100%, 0 100%',
+      backgroundRepeat: 'no-repeat',
+      transition: 'background-size 400ms',
+  
+      '&:hover, &:focus': {
+        cursor: 'pointer',
+        backgroundSize: '0 0.15em, 100% 0.15em'
+      }
+    },
+
     'span': {
-      color: theme.colors.main
+      opacity: 0.1
     }
   }
 })
 
 export const Header = styled.div(props => {
+  const { theme } = props;
   return {
-    textAlign: 'center',
     width: '100%',
     position: 'fixed',
     top: props.theme.margin * 2,
-    height: HEADER_HEIGHT
+    height: HEADER_HEIGHT,
+
+    'h2': {
+      marginBottom: theme.margin /2,
+      width: `calc(100% - ${theme.margin * 4}px)`
+    },  
+
   }
 })
 

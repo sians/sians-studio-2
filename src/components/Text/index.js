@@ -8,7 +8,7 @@ const HEADING_SIZES = {
 }
 
 const Heading = styled.h2(props => {
-  const { theme, colorName, size, fontWeight } = props;
+  const { theme, colorName, size, fontWeight, textAlign } = props;
 
   return {
     fontSize: HEADING_SIZES[size] || '2rem',
@@ -16,6 +16,7 @@ const Heading = styled.h2(props => {
     padding: 0,
     margin: 0,
     color: theme.colors?.[colorName] || theme.colors.black,
+    textAlign: textAlign
   }
 })
 

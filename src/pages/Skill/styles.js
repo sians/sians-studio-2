@@ -9,6 +9,10 @@ export const Page = styled.div(props => {
     height: `calc(100vh - ${theme.navHeight}px)`,
     maxWidth: theme.maxPageWidth - theme.margin*2,
     margin: 'auto',
+
+    '.blurb': {
+      marginBottom: theme.margin * 2
+    }
   }
 })
 
